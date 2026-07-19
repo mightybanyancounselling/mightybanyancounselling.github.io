@@ -339,6 +339,54 @@
       color: var(--muted);
     }
 
+
+    .fees {
+      background: var(--white);
+    }
+
+    .fees-grid {
+      display: grid;
+      grid-template-columns: 0.75fr 1.25fr;
+      align-items: start;
+      gap: 70px;
+    }
+
+    .fee-card {
+      padding: 44px;
+      border-radius: 28px;
+      background: var(--green-dark);
+      color: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .fee-label {
+      display: block;
+      margin-bottom: 18px;
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .fee-amount {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 4.5rem;
+      line-height: 1;
+    }
+
+    .fee-duration {
+      margin-top: 12px;
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 1.05rem;
+    }
+
+    .fees-copy p {
+      margin-bottom: 20px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
     .contact {
       background: var(--green-dark);
       color: var(--white);
@@ -397,6 +445,7 @@
 
       .hero-grid,
       .about-grid,
+      .fees-grid,
       .contact-grid {
         grid-template-columns: 1fr;
       }
@@ -468,6 +517,7 @@
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#approach">Approach</a></li>
+          <li><a href="#fees">Fees</a></li>
           <li><a class="nav-button" href="#contact">Get in Touch</a></li>
         </ul>
       </nav>
@@ -628,6 +678,50 @@
             <p>
               Your identity, background, family, community, and lived
               experience are respected and welcomed.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <section class="fees" id="fees">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">Fees and payment</span>
+          <h2>Professional counselling at an accessible rate.</h2>
+        </div>
+
+        <div class="fees-grid">
+
+          <div class="fee-card">
+            <span class="fee-label">Individual counselling</span>
+            <p class="fee-amount">$100</p>
+            <p class="fee-duration">per 50-minute session</p>
+          </div>
+
+          <div class="fees-copy">
+            <p>
+              The fee reflects a conscious commitment to accessibility. Online
+              delivery and a low-overhead practice model make it possible to
+              offer experienced, professional counselling at a rate that is
+              more manageable for many clients.
+            </p>
+
+            <p>
+              Mighty Banyan Counselling is committed to maintaining a high
+              standard of professional care. Information about the
+              practitioner’s credentials, experience, training, and relevant
+              certifications is available on this website.
+            </p>
+
+            <p>
+              Payment is accepted by <strong>e-transfer</strong>. Direct billing
+              is not available. Clients may submit their receipt to their
+              insurance provider for reimbursement, depending on the terms of
+              their individual plan.
             </p>
           </div>
 
