@@ -3,10 +3,669 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mighty Banyan Counselling</title>
+
+  <title>Mighty Banyan Counselling | Compassionate Counselling in Alberta</title>
+
+  <meta
+    name="description"
+    content="Mighty Banyan Counselling offers compassionate, respectful, and client-centred counselling support in Alberta."
+  >
+
+  <style>
+    :root {
+      --green-dark: #24483b;
+      --green: #3f6b59;
+      --green-light: #dfeae4;
+      --cream: #f8f5ed;
+      --white: #ffffff;
+      --text: #29312d;
+      --muted: #5f6b65;
+      --accent: #b8845c;
+      --shadow: 0 12px 35px rgba(36, 72, 59, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--cream);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(248, 245, 237, 0.96);
+      border-bottom: 1px solid rgba(36, 72, 59, 0.12);
+      backdrop-filter: blur(10px);
+    }
+
+    nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand {
+      text-decoration: none;
+      color: var(--green-dark);
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text);
+      font-size: 0.96rem;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: var(--green);
+    }
+
+    .nav-button {
+      display: inline-block;
+      padding: 11px 20px;
+      border-radius: 999px;
+      background: var(--green-dark);
+      color: var(--white) !important;
+    }
+
+    .hero {
+      min-height: 700px;
+      display: grid;
+      align-items: center;
+      background:
+        radial-gradient(
+          circle at 85% 20%,
+          rgba(63, 107, 89, 0.18),
+          transparent 32%
+        ),
+        linear-gradient(135deg, var(--cream), #edf3ef);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: center;
+      gap: 70px;
+      padding: 90px 0;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 18px;
+      color: var(--green);
+      font-size: 0.86rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 760px;
+      color: var(--green-dark);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(3rem, 6vw, 5.5rem);
+      line-height: 1.02;
+      font-weight: 500;
+    }
+
+    .hero-text {
+      max-width: 650px;
+      margin: 26px 0 34px;
+      color: var(--muted);
+      font-size: 1.18rem;
+    }
+
+    .button-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 24px;
+      border: 2px solid var(--green-dark);
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .button-primary {
+      background: var(--green-dark);
+      color: var(--white);
+    }
+
+    .button-primary:hover {
+      background: var(--green);
+      border-color: var(--green);
+      transform: translateY(-2px);
+    }
+
+    .button-secondary {
+      color: var(--green-dark);
+      background: transparent;
+    }
+
+    .button-secondary:hover {
+      background: var(--green-light);
+      transform: translateY(-2px);
+    }
+
+    .tree-card {
+      position: relative;
+      min-height: 460px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 36px 36px 160px 36px;
+      background:
+        linear-gradient(rgba(36, 72, 59, 0.08), rgba(36, 72, 59, 0.16)),
+        var(--green-light);
+      box-shadow: var(--shadow);
+    }
+
+    .tree-symbol {
+      color: var(--green-dark);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 10rem;
+      line-height: 1;
+    }
+
+    .tree-card::before,
+    .tree-card::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.38);
+    }
+
+    .tree-card::before {
+      width: 190px;
+      height: 190px;
+      top: -55px;
+      right: -35px;
+    }
+
+    .tree-card::after {
+      width: 130px;
+      height: 130px;
+      bottom: 35px;
+      left: -35px;
+    }
+
+    section {
+      padding: 100px 0;
+    }
+
+    .section-heading {
+      max-width: 720px;
+      margin-bottom: 50px;
+    }
+
+    .section-heading h2 {
+      margin-bottom: 18px;
+      color: var(--green-dark);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.2rem, 4vw, 3.5rem);
+      line-height: 1.15;
+      font-weight: 500;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .about {
+      background: var(--white);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      align-items: start;
+      gap: 70px;
+    }
+
+    .quote-card {
+      padding: 42px;
+      border-radius: 28px;
+      background: var(--green-dark);
+      color: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .quote-card p {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.75rem;
+      line-height: 1.35;
+    }
+
+    .about-copy p {
+      margin-bottom: 20px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .services {
+      background: var(--cream);
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .service-card {
+      padding: 34px;
+      border: 1px solid rgba(36, 72, 59, 0.12);
+      border-radius: 24px;
+      background: var(--white);
+      box-shadow: 0 8px 24px rgba(36, 72, 59, 0.06);
+    }
+
+    .service-number {
+      display: block;
+      margin-bottom: 24px;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .service-card h3 {
+      margin-bottom: 14px;
+      color: var(--green-dark);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.55rem;
+      font-weight: 500;
+    }
+
+    .service-card p {
+      color: var(--muted);
+    }
+
+    .approach {
+      background: var(--green-light);
+    }
+
+    .approach-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 45px;
+    }
+
+    .approach-item h3 {
+      margin-bottom: 12px;
+      color: var(--green-dark);
+      font-size: 1.15rem;
+    }
+
+    .approach-item p {
+      color: var(--muted);
+    }
+
+    .contact {
+      background: var(--green-dark);
+      color: var(--white);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .contact h2 {
+      max-width: 750px;
+      margin-bottom: 18px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.4rem, 4vw, 4rem);
+      line-height: 1.1;
+      font-weight: 500;
+    }
+
+    .contact p {
+      max-width: 680px;
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 1.06rem;
+    }
+
+    .contact .button {
+      border-color: var(--white);
+      background: var(--white);
+      color: var(--green-dark);
+      white-space: nowrap;
+    }
+
+    footer {
+      padding: 35px 0;
+      background: #18362d;
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 0.92rem;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    @media (max-width: 850px) {
+      nav {
+        padding: 18px 0;
+      }
+
+      .nav-links li:not(:last-child) {
+        display: none;
+      }
+
+      .hero-grid,
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-grid {
+        padding: 70px 0;
+      }
+
+      .tree-card {
+        min-height: 350px;
+      }
+
+      .service-grid,
+      .approach-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-grid {
+        align-items: start;
+      }
+    }
+
+    @media (max-width: 520px) {
+      h1 {
+        font-size: 2.8rem;
+      }
+
+      section {
+        padding: 75px 0;
+      }
+
+      .brand {
+        max-width: 170px;
+        line-height: 1.2;
+      }
+
+      .nav-button {
+        padding: 9px 14px;
+        font-size: 0.85rem;
+      }
+
+      .button-group {
+        flex-direction: column;
+      }
+
+      .button {
+        text-align: center;
+      }
+
+      .footer-content {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Mighty Banyan Counselling</h1>
-  <p>Our website is coming soon.</p>
+
+  <header>
+    <div class="container">
+      <nav aria-label="Main navigation">
+        <a class="brand" href="#home">Mighty Banyan Counselling</a>
+
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#approach">Approach</a></li>
+          <li><a class="nav-button" href="#contact">Get in Touch</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+
+        <div>
+          <span class="eyebrow">Compassionate counselling and support</span>
+
+          <h1>A safe place to pause, heal, and grow.</h1>
+
+          <p class="hero-text">
+            Mighty Banyan Counselling offers respectful, compassionate, and
+            client-centred support to help you navigate life's challenges,
+            strengthen your resilience, and move forward with greater clarity.
+          </p>
+
+          <div class="button-group">
+            <a class="button button-primary" href="#contact">
+              Book a Consultation
+            </a>
+
+            <a class="button button-secondary" href="#about">
+              Learn More
+            </a>
+          </div>
+        </div>
+
+        <div class="tree-card" aria-label="Stylized banyan tree">
+          <div class="tree-symbol" aria-hidden="true">♧</div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">About Mighty Banyan</span>
+
+          <h2>Support grounded in compassion, dignity, and connection.</h2>
+        </div>
+
+        <div class="about-grid">
+
+          <div class="quote-card">
+            <p>
+              Like the banyan tree, we can grow stronger through connection,
+              support, and deeply rooted resilience.
+            </p>
+          </div>
+
+          <div class="about-copy">
+            <p>
+              Reaching out for counselling can feel difficult. At Mighty Banyan
+              Counselling, you will be welcomed into a supportive and
+              non-judgmental space where your experiences, concerns, and goals
+              are treated with care and respect.
+            </p>
+
+            <p>
+              Counselling is collaborative. Together, we can explore the
+              challenges you are facing, recognize your strengths, and develop
+              practical ways to create meaningful and sustainable change.
+            </p>
+
+            <p>
+              Services are tailored to each client's circumstances, values,
+              culture, and preferred pace.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">Counselling services</span>
+
+          <h2>Personalized support for life's difficult seasons.</h2>
+
+          <p>
+            Counselling may help with a range of emotional, relational, and
+            life-transition concerns.
+          </p>
+        </div>
+
+        <div class="service-grid">
+
+          <article class="service-card">
+            <span class="service-number">01</span>
+            <h3>Individual Counselling</h3>
+            <p>
+              One-to-one support in a confidential and compassionate setting,
+              focused on your needs, experiences, and personal goals.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">02</span>
+            <h3>Stress and Life Transitions</h3>
+            <p>
+              Support for managing stress, uncertainty, changing roles,
+              relationship concerns, loss, or major life transitions.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">03</span>
+            <h3>Emotional Well-Being</h3>
+            <p>
+              A supportive space to explore difficult emotions, build coping
+              strategies, strengthen confidence, and improve well-being.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="approach" id="approach">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">Our approach</span>
+          <h2>Counselling that honours your story.</h2>
+        </div>
+
+        <div class="approach-grid">
+
+          <div class="approach-item">
+            <h3>Client-Centred</h3>
+            <p>
+              Your priorities, experiences, values, and goals guide the
+              counselling process.
+            </p>
+          </div>
+
+          <div class="approach-item">
+            <h3>Strengths-Based</h3>
+            <p>
+              We recognize the skills, resilience, knowledge, and strengths you
+              already carry.
+            </p>
+          </div>
+
+          <div class="approach-item">
+            <h3>Culturally Responsive</h3>
+            <p>
+              Your identity, background, family, community, and lived
+              experience are respected and welcomed.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container contact-grid">
+
+        <div>
+          <h2>You do not have to navigate everything alone.</h2>
+
+          <p>
+            Contact Mighty Banyan Counselling to ask a question or arrange an
+            initial consultation. Additional appointment and contact
+            information will be added here shortly.
+          </p>
+        </div>
+
+        <a class="button" href="mailto:mightybanyancounselling@gmail.com">
+          Email Us
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <p>
+        &copy; 2026 Mighty Banyan Counselling. All rights reserved.
+      </p>
+
+      <p>Serving clients in Alberta.</p>
+    </div>
+  </footer>
+
 </body>
 </html>
