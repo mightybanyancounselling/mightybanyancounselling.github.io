@@ -406,6 +406,63 @@
       background: rgba(255, 255, 255, 0.78);
     }
 
+    .credential-strip {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .credential-chip {
+      padding: 20px 16px;
+      border: 1px solid rgba(36, 72, 59, 0.12);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.78);
+      text-align: center;
+      box-shadow: 0 6px 18px rgba(36, 72, 59, 0.05);
+    }
+
+    .credential-chip strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--green-dark);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+
+    .credential-chip span {
+      color: var(--muted);
+      font-size: 0.84rem;
+      line-height: 1.4;
+    }
+
+    .expand-section {
+      margin-top: 26px;
+      border: 1px solid rgba(36, 72, 59, 0.14);
+      border-radius: 20px;
+      background: var(--cream);
+      overflow: hidden;
+    }
+
+    .expand-section > summary {
+      padding: 20px 24px;
+      color: var(--green-dark);
+      font-weight: 700;
+      background: rgba(255, 255, 255, 0.55);
+    }
+
+    .expand-content {
+      padding: 24px;
+    }
+
+    .modality-list {
+      margin-top: 14px;
+      color: var(--green-dark);
+      font-weight: 700;
+      line-height: 1.9;
+    }
+
     .credential-label {
       display: block;
       margin-bottom: 12px;
@@ -637,6 +694,10 @@
       .card-grid {
         grid-template-columns: repeat(2, 1fr);
       }
+
+      .credential-strip {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
     @media (max-width: 850px) {
@@ -703,6 +764,18 @@
 
       .card-grid {
         grid-template-columns: 1fr;
+      }
+
+      .credential-strip {
+        grid-template-columns: 1fr;
+      }
+
+      .credential-chip {
+        text-align: left;
+      }
+
+      .expand-content {
+        padding: 18px;
       }
     }
 
@@ -791,10 +864,10 @@
           <h1>Deep roots. Wide-reaching care.</h1>
 
           <p class="hero-text">
-            Like the banyan tree, meaningful growth can be supported by many strong,
-            connected roots. Rupa Ray, MSW, RSW, brings broad clinical experience,
-            trauma-informed care, and a deeply person-centred approach to counselling
-            for individuals and couples.
+            Rupa Ray, MSW, RSW, brings <strong>six years of counselling and therapy
+            experience</strong> across mental health, trauma, healthcare, rehabilitation,
+            and private practice. Like the banyan tree, that broad experience forms many
+            connected roots within one warm, trauma-informed, person-centred approach.
           </p>
 
           <div class="button-group">
@@ -968,97 +1041,106 @@
 
         <div class="section-heading">
           <span class="eyebrow">Professional experience</span>
-          <h2>Experience across community, healthcare, trauma, rehabilitation, and private practice.</h2>
+          <h2>Six years of counselling and therapy across diverse clinical settings.</h2>
           <p>
-            Rupa’s clinical background spans a wide range of settings and populations.
-            That breadth informs the way she understands complex concerns that often cross
-            the boundaries between mental health, physical health, family, work, culture,
-            and life circumstances.
+            Rupa’s experience spans community mental health, healthcare, trauma services,
+            rehabilitation, WCB-related care, newcomer support, and private practice.
+            That breadth helps her understand concerns that often cross the boundaries
+            between mental health, physical health, relationships, work, culture, and life circumstances.
           </p>
         </div>
 
-        <div class="card-grid">
+        <details class="expand-section">
+          <summary>View Rupa’s professional experience</summary>
+          <div class="expand-content">
+            <div class="card-grid">
 
-          <article class="experience-card">
-            <span class="organization">Catholic Social Services</span>
-            <h3>Immigrants & Refugees</h3>
-            <p>
-              Community-based experience supporting newcomers and families navigating
-              settlement, adjustment, culture, stress, and major life transitions.
+              <article class="experience-card">
+                <span class="organization">Catholic Social Services</span>
+                <h3>Immigrants & Refugees</h3>
+                <p>
+                  Community-based experience supporting newcomers and families navigating
+                  settlement, adjustment, culture, stress, and major life transitions.
+                </p>
+              </article>
+
+              <article class="experience-card">
+                <span class="organization">Alberta Health Services / Recovery Alberta</span>
+                <h3>Hospital & Mental Health Care</h3>
+                <p>
+                  Experience in healthcare settings where mental health concerns often
+                  intersect with acute stress, medical issues, family needs, and complex systems.
+                </p>
+              </article>
+
+              <article class="experience-card">
+                <span class="organization">University of Alberta · Faculty of Nursing</span>
+                <h3>Chronic Illness & Dialysis</h3>
+                <p>
+                  Work involving people receiving dialysis, with attention to the emotional,
+                  relational, and day-to-day impact of living with serious chronic illness.
+                </p>
+              </article>
+
+              <article class="experience-card">
+                <span class="organization">Community-Based Trauma Services</span>
+                <h3>Sexual Violence Survivors</h3>
+                <p>
+                  Trauma-focused experience supporting survivors of sexual violence with care,
+                  respect, choice, and sensitivity to safety and readiness.
+                </p>
+              </article>
+
+              <article class="experience-card">
+                <span class="organization">Lifemark</span>
+                <h3>Vocational & Rehabilitation Care</h3>
+                <p>
+                  Experience working alongside vocational teams and supporting WCB claimants
+                  navigating injury, disability, rehabilitation, and return-to-work concerns.
+                </p>
+              </article>
+
+              <article class="experience-card">
+                <span class="organization">Private Practice</span>
+                <h3>Six Years of Clinical Practice</h3>
+                <p>
+                  Ongoing counselling work with individuals and couples across a broad range of
+                  emotional, relational, trauma-related, health, and life concerns.
+                </p>
+              </article>
+
+              <article class="experience-card">
+                <span class="organization">Soluna</span>
+                <h3>Accelerated Resolution Therapy (ART)</h3>
+                <p>
+                  Provides trauma-focused therapy using Accelerated Resolution Therapy (ART)
+                  as part of her clinical practice.
+                </p>
+              </article>
+
+              <article class="experience-card">
+                <span class="organization">Workers' Compensation Board (WCB)</span>
+                <h3>Approved Psychology Service Provider</h3>
+                <p>
+                  Rupa is an approved WCB psychology service provider, supporting clients
+                  experiencing work-related psychological concerns, recovery challenges, and
+                  return-to-work needs.
+                </p>
+              </article>
+
+            </div>
+
+            <p class="experience-note">
+              Organization names are included to describe Rupa’s professional background and
+              do not imply endorsement of Mighty Banyan Counselling by those organizations.
             </p>
-          </article>
+          </div>
+        </details>
 
-          <article class="experience-card">
-            <span class="organization">Alberta Health Services / Recovery Alberta</span>
-            <h3>Hospital & Mental Health Care</h3>
-            <p>
-              Experience in healthcare settings where mental health concerns often
-              intersect with acute stress, medical issues, family needs, and complex systems.
-            </p>
-          </article>
-
-          <article class="experience-card">
-            <span class="organization">University of Alberta · Faculty of Nursing</span>
-            <h3>Chronic Illness & Dialysis</h3>
-            <p>
-              Work involving people receiving dialysis, with attention to the emotional,
-              relational, and day-to-day impact of living with serious chronic illness.
-            </p>
-          </article>
-
-          <article class="experience-card">
-            <span class="organization">Community-Based Trauma Services</span>
-            <h3>Sexual Violence Survivors</h3>
-            <p>
-              Trauma-focused experience supporting survivors of sexual violence with care,
-              respect, choice, and sensitivity to safety and readiness.
-            </p>
-          </article>
-
-          <article class="experience-card">
-            <span class="organization">Lifemark</span>
-            <h3>Vocational & Rehabilitation Care</h3>
-            <p>
-              Experience working alongside vocational teams and supporting WCB claimants
-              navigating injury, disability, rehabilitation, and return-to-work concerns.
-            </p>
-          </article>
-
-          <article class="experience-card">
-            <span class="organization">Private Practice</span>
-            <h3>Six Years of Clinical Practice</h3>
-            <p>
-              Ongoing counselling work with individuals and couples across a broad range of
-              emotional, relational, trauma-related, health, and life concerns.
-            </p>
-          </article>
-<article class="experience-card">
-  <span class="organization">Soluna</span>
-  <h3>Accelerated Resolution Therapy (ART)</h3>
-  <p>
-    Provides trauma-focused therapy using Accelerated Resolution Therapy (ART)
-    as part of her clinical practice.
-  </p>
-</article>
-
-<article class="experience-card">
-  <span class="organization">Workers' Compensation Board (WCB)</span>
-  <h3>Approved Psychology Service Provider</h3>
-  <p>
-    Rupa is an approved WCB psychology service provider, supporting clients
-    experiencing work-related psychological concerns, recovery challenges, and
-    return-to-work needs.
-  </p>
-</article>
-        </div>
-
-        <p class="experience-note">
-          Organization names are included to describe Rupa’s professional background and
-          do not imply endorsement of Mighty Banyan Counselling by those organizations.
-        </p>
       </div>
     </section>
-<section class="why-banyan" id="why-banyan">
+
+    <section class="why-banyan" id="why-banyan">
   <div class="container">
 
     <div class="section-heading">
@@ -1110,92 +1192,95 @@
         <div class="section-heading">
           <span class="eyebrow">Credentials & professional development</span>
           <h2>Clinical training supported by ongoing learning and consultation.</h2>
-          <!--
-          <p>
-            This section will continue to grow as we add Rupa’s complete training history
-            and selected certifications.
-          </p>
-          -->
         </div>
 
-        <div class="card-grid">
+        <div class="credential-strip">
+          <div class="credential-chip">
+            <strong>MSW</strong>
+            <span>Clinical specialization · University of Calgary</span>
+          </div>
 
-          <article class="credential-card">
-            <span class="credential-label">Education</span>
-            <h3>Master of Social Work</h3>
-            <p>
-              Clinical specialization, University of Calgary.
-            </p>
-          </article>
+          <div class="credential-chip">
+            <strong>RSW</strong>
+            <span>Registered in Alberta & Ontario</span>
+          </div>
 
-          <article class="credential-card">
-            <span class="credential-label">Professional registration</span>
-            <h3>Registered Social Worker</h3>
-            <p>
-              Registered to practise social work in Alberta and Ontario.
-            </p>
-          </article>
+          <div class="credential-chip">
+            <strong>Authorized Practice</strong>
+            <span>Restricted psychosocial interventions in Alberta</span>
+          </div>
 
-          <article class="credential-card">
-            <span class="credential-label">Authorized practice</span>
-            <h3>Restricted Psychosocial Interventions</h3>
-            <p>
-              Authorized to perform restricted psychosocial interventions in Alberta.
-            </p>
-          </article>
+          <div class="credential-chip">
+            <strong>EMDR & ART</strong>
+            <span>Specialized trauma-therapy training</span>
+          </div>
 
-          <article class="credential-card">
-            <span class="credential-label">Trauma therapy</span>
-            <h3>EMDR & ART Training</h3>
-            <p>
-              Specialized training in EMDR (Eye Movement Desensitization and Reprocessing)
-              and Accelerated Resolution Therapy (ART).
-            </p>
-          </article>
-
-          <article class="credential-card">
-            <span class="credential-label">Ongoing consultation</span>
-            <h3>Complex Case Consultation</h3>
-            <p>
-              Rupa invests in regular independent clinical consultation,
-              including biweekly review of complex cases as part of her commitment to
-              thoughtful, accountable practice.
-            </p>
-          </article>
-
-          <article class="credential-card">
-            <span class="credential-label">Coming next</span>
-            <h3>Selected Certificates</h3>
-            <p>
-              To be added later.
-            </p>
-          </article>
-
-          <article class="credential-card">
-            <span class="credential-label">Professional profile</span>
-            <h3>Psychology Today</h3>
-            <p>
-              <a
-                class="text-link"
-                href="https://www.psychologytoday.com/ca/therapists/rupa-ray-edmonton-ab/1455513"
-                target="_blank"
-                rel="noopener noreferrer"
-              >View Rupa’s Psychology Today profile</a>
-              for an additional overview of her practice.
-            </p>
-          </article>
-
+          <div class="credential-chip">
+            <strong>Ongoing Consultation</strong>
+            <span>Biweekly complex-case consultation</span>
+          </div>
         </div>
 
-        <!--
-          Later, once Rupa's CV is available, this is a good place to add:
-          - exact ACSW / Ontario registration wording
-          - selected ART certificate titles and levels
-          - EMDR training details
-          - CBT-I and other specialized training
-          - optional links to professional registries
-          Avoid posting registration numbers or personal certificate details unless Rupa wants them public.
-        -->
+        <details class="expand-section">
+          <summary>View credential details</summary>
+          <div class="expand-content">
+            <div class="card-grid">
+
+              <article class="credential-card">
+                <span class="credential-label">Education</span>
+                <h3>Master of Social Work</h3>
+                <p>Clinical specialization, University of Calgary.</p>
+              </article>
+
+              <article class="credential-card">
+                <span class="credential-label">Professional registration</span>
+                <h3>Registered Social Worker</h3>
+                <p>Registered to practise social work in Alberta and Ontario.</p>
+              </article>
+
+              <article class="credential-card">
+                <span class="credential-label">Authorized practice</span>
+                <h3>Restricted Psychosocial Interventions</h3>
+                <p>Authorized to perform restricted psychosocial interventions in Alberta.</p>
+              </article>
+
+              <article class="credential-card">
+                <span class="credential-label">Trauma therapy</span>
+                <h3>EMDR & ART Training</h3>
+                <p>
+                  Specialized training in EMDR (Eye Movement Desensitization and Reprocessing)
+                  and Accelerated Resolution Therapy (ART).
+                </p>
+              </article>
+
+              <article class="credential-card">
+                <span class="credential-label">Ongoing consultation</span>
+                <h3>Complex Case Consultation</h3>
+                <p>
+                  Rupa invests in regular independent clinical consultation,
+                  including biweekly review of complex cases as part of her commitment to
+                  thoughtful, accountable practice.
+                </p>
+              </article>
+
+              <article class="credential-card">
+                <span class="credential-label">Professional profile</span>
+                <h3>Psychology Today</h3>
+                <p>
+                  <a
+                    class="text-link"
+                    href="https://www.psychologytoday.com/ca/therapists/rupa-ray-edmonton-ab/1455513"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >View Rupa’s Psychology Today profile</a>
+                  for an additional overview of her practice.
+                </p>
+              </article>
+
+            </div>
+          </div>
+        </details>
+
       </div>
     </section>
 
@@ -1244,84 +1329,91 @@
           <span class="eyebrow">Therapeutic approaches</span>
           <h2>Evidence-informed therapy, thoughtfully matched to the person.</h2>
           <p>
-            Rupa draws from a range of evidence-informed therapeutic approaches.
-            Rather than fitting every client into one model, she considers the
-            concern, the person’s experiences and preferences, and what is most
-            likely to be helpful at that point in therapy.
+            Rupa draws from multiple therapeutic frameworks rather than fitting every
+            client into one model.
+          </p>
+          <p class="modality-list">
+            EMDR · ART · CBT · CBT-I · ACT · DBT · Narrative · Strengths-Based ·
+            Motivational Interviewing · Solution-Focused · Attachment & Relational
           </p>
         </div>
 
-        <div class="card-grid">
+        <details class="expand-section">
+          <summary>Learn about these approaches</summary>
+          <div class="expand-content">
+            <div class="card-grid">
 
-          <article class="training-card">
-            <span class="training-tag">Trauma-focused</span>
-            <h3>EMDR & Accelerated Resolution Therapy</h3>
-            <p>
-              Rupa uses trauma-focused approaches including EMDR
-              (Eye Movement Desensitization and Reprocessing) and Accelerated
-              Resolution Therapy (ART). She has completed both basic and advanced
-              ART training and actively incorporates trauma-focused work into her
-              clinical practice.
-            </p>
-          </article>
+              <article class="training-card">
+                <span class="training-tag">Trauma-focused</span>
+                <h3>EMDR & Accelerated Resolution Therapy</h3>
+                <p>
+                  Rupa uses trauma-focused approaches including EMDR
+                  (Eye Movement Desensitization and Reprocessing) and Accelerated
+                  Resolution Therapy (ART). She has completed both basic and advanced
+                  ART training and actively incorporates trauma-focused work into her
+                  clinical practice.
+                </p>
+              </article>
 
-          <article class="training-card">
-            <span class="training-tag">Structured & practical</span>
-            <h3>CBT & CBT-I</h3>
-            <p>
-              Cognitive Behavioural Therapy (CBT) can help explore the connections
-              between thoughts, emotions, behaviours, and everyday patterns.
-              Rupa also has training in Cognitive Behavioural Therapy for Insomnia
-              (CBT-I), allowing sleep concerns to be addressed more specifically
-              when appropriate.
-            </p>
-          </article>
+              <article class="training-card">
+                <span class="training-tag">Structured & practical</span>
+                <h3>CBT & CBT-I</h3>
+                <p>
+                  Cognitive Behavioural Therapy (CBT) can help explore the connections
+                  between thoughts, emotions, behaviours, and everyday patterns.
+                  Rupa also has training in Cognitive Behavioural Therapy for Insomnia
+                  (CBT-I), allowing sleep concerns to be addressed more specifically
+                  when appropriate.
+                </p>
+              </article>
 
-          <article class="training-card">
-            <span class="training-tag">Acceptance & regulation</span>
-            <h3>ACT & DBT</h3>
-            <p>
-              Acceptance and Commitment Therapy (ACT) and Dialectical Behaviour
-              Therapy (DBT) offer tools for working with difficult emotions,
-              developing psychological flexibility, strengthening coping skills,
-              and moving toward actions that reflect what matters to you.
-            </p>
-          </article>
+              <article class="training-card">
+                <span class="training-tag">Acceptance & regulation</span>
+                <h3>ACT & DBT</h3>
+                <p>
+                  Acceptance and Commitment Therapy (ACT) and Dialectical Behaviour
+                  Therapy (DBT) offer tools for working with difficult emotions,
+                  developing psychological flexibility, strengthening coping skills,
+                  and moving toward actions that reflect what matters to you.
+                </p>
+              </article>
 
-          <article class="training-card">
-            <span class="training-tag">Meaning & perspective</span>
-            <h3>Narrative & Strengths-Based Therapy</h3>
-            <p>
-              Narrative and strengths-based approaches make room for the broader
-              story of a person’s life rather than defining someone by a problem
-              or diagnosis. They can help identify resilience, values, abilities,
-              relationships, and alternative ways of understanding difficult
-              experiences.
-            </p>
-          </article>
+              <article class="training-card">
+                <span class="training-tag">Meaning & perspective</span>
+                <h3>Narrative & Strengths-Based Therapy</h3>
+                <p>
+                  Narrative and strengths-based approaches make room for the broader
+                  story of a person’s life rather than defining someone by a problem
+                  or diagnosis. They can help identify resilience, values, abilities,
+                  relationships, and alternative ways of understanding difficult experiences.
+                </p>
+              </article>
 
-          <article class="training-card">
-            <span class="training-tag">Change & problem solving</span>
-            <h3>Motivational Interviewing & Solution-Focused Therapy</h3>
-            <p>
-              These collaborative approaches can be useful when a client is
-              considering change, feeling uncertain about next steps, or looking
-              for practical ways to build on what is already working.
-            </p>
-          </article>
+              <article class="training-card">
+                <span class="training-tag">Change & problem solving</span>
+                <h3>Motivational Interviewing & Solution-Focused Therapy</h3>
+                <p>
+                  These collaborative approaches can be useful when a client is
+                  considering change, feeling uncertain about next steps, or looking
+                  for practical ways to build on what is already working.
+                </p>
+              </article>
 
-          <article class="training-card">
-            <span class="training-tag">Relationships & context</span>
-            <h3>Attachment, Family & Relational Approaches</h3>
-            <p>
-              Relationship patterns, attachment experiences, family dynamics,
-              culture, and important life relationships can all shape emotional
-              well-being. Rupa can draw on attachment-based, family, and relational
-              perspectives when these connections are relevant to the work.
-            </p>
-          </article>
+              <article class="training-card">
+                <span class="training-tag">Relationships & context</span>
+                <h3>Attachment, Family & Relational Approaches</h3>
+                <p>
+                  Relationship patterns, attachment experiences, family dynamics,
+                  culture, and important life relationships can all shape emotional
+                  well-being. Rupa can draw on attachment-based, family, and relational
+                  perspectives when these connections are relevant to the work.
+                </p>
+              </article>
 
-        </div>
+            </div>
+          </div>
+        </details>
+
       </div>
     </section>
 
