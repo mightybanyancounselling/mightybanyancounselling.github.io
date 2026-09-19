@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Mighty Banyan Counselling | Compassionate Counselling in Alberta</title>
+  <title>Rupa Ray, MSW, RSW | Mighty Banyan Counselling</title>
 
   <meta
     name="description"
-    content="Mighty Banyan Counselling offers compassionate, respectful, and client-centred counselling support in Alberta."
+    content="Mighty Banyan Counselling provides warm, trauma-informed, culturally responsive online counselling with Rupa Ray, MSW, RSW, for clients in Alberta and Ontario."
   >
 
   <style>
@@ -45,6 +45,13 @@
       color: inherit;
     }
 
+    a:focus-visible,
+    button:focus-visible,
+    summary:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 4px;
+    }
+
     .container {
       width: min(1120px, 90%);
       margin: 0 auto;
@@ -78,14 +85,14 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 26px;
+      gap: 24px;
       list-style: none;
     }
 
     .nav-links a {
       text-decoration: none;
       color: var(--text);
-      font-size: 0.96rem;
+      font-size: 0.95rem;
       font-weight: 600;
     }
 
@@ -136,13 +143,13 @@
       max-width: 760px;
       color: var(--green-dark);
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(3rem, 6vw, 5.5rem);
+      font-size: clamp(3rem, 6vw, 5.2rem);
       line-height: 1.02;
       font-weight: 500;
     }
 
     .hero-text {
-      max-width: 650px;
+      max-width: 670px;
       margin: 26px 0 34px;
       color: var(--muted);
       font-size: 1.18rem;
@@ -185,55 +192,88 @@
       transform: translateY(-2px);
     }
 
-    .tree-card {
+    .profile-card {
       position: relative;
       min-height: 460px;
       overflow: hidden;
       display: flex;
-      align-items: center;
-      justify-content: center;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 46px;
       border-radius: 36px 36px 160px 36px;
       background:
-        linear-gradient(rgba(36, 72, 59, 0.08), rgba(36, 72, 59, 0.16)),
+        linear-gradient(rgba(36, 72, 59, 0.05), rgba(36, 72, 59, 0.13)),
         var(--green-light);
       box-shadow: var(--shadow);
     }
 
-    .tree-symbol {
-      color: var(--green-dark);
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 10rem;
-      line-height: 1;
-    }
-
-    .tree-card::before,
-    .tree-card::after {
+    .profile-card::before,
+    .profile-card::after {
       content: "";
       position: absolute;
       border-radius: 50%;
       background: rgba(255, 255, 255, 0.38);
     }
 
-    .tree-card::before {
-      width: 190px;
-      height: 190px;
+    .profile-card::before {
+      width: 210px;
+      height: 210px;
       top: -55px;
       right: -35px;
     }
 
-    .tree-card::after {
-      width: 130px;
-      height: 130px;
+    .profile-card::after {
+      width: 135px;
+      height: 135px;
       bottom: 35px;
-      left: -35px;
+      left: -45px;
+    }
+
+    .profile-initials {
+      position: relative;
+      z-index: 1;
+      width: 104px;
+      height: 104px;
+      margin-bottom: 26px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--green-dark);
+      color: var(--white);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 2.2rem;
+    }
+
+    .profile-card h2,
+    .profile-card p {
+      position: relative;
+      z-index: 1;
+    }
+
+    .profile-card h2 {
+      margin-bottom: 6px;
+      color: var(--green-dark);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 2rem;
+      font-weight: 500;
+    }
+
+    .profile-card p {
+      color: var(--muted);
+    }
+
+    .profile-card .profile-small {
+      margin-top: 12px;
+      font-size: 0.95rem;
     }
 
     section {
       padding: 100px 0;
+      scroll-margin-top: 80px;
     }
 
     .section-heading {
-      max-width: 720px;
+      max-width: 760px;
       margin-bottom: 50px;
     }
 
@@ -282,17 +322,28 @@
       font-size: 1.05rem;
     }
 
+    .text-link {
+      color: var(--green-dark);
+      font-weight: 700;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+
     .services {
       background: var(--cream);
     }
 
-    .service-grid {
+    .card-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
     }
 
-    .service-card {
+    .service-card,
+    .experience-card,
+    .credential-card,
+    .training-card,
+    .info-card {
       padding: 34px;
       border: 1px solid rgba(36, 72, 59, 0.12);
       border-radius: 24px;
@@ -307,20 +358,66 @@
       font-weight: 700;
     }
 
-    .service-card h3 {
+    .service-card h3,
+    .experience-card h3,
+    .credential-card h3,
+    .training-card h3,
+    .info-card h3 {
       margin-bottom: 14px;
       color: var(--green-dark);
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.55rem;
+      font-size: 1.48rem;
       font-weight: 500;
     }
 
-    .service-card p {
+    .service-card p,
+    .experience-card p,
+    .credential-card p,
+    .training-card p,
+    .info-card p {
       color: var(--muted);
     }
 
-    .approach {
+    .experience {
+      background: var(--white);
+    }
+
+    .experience-card .organization {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .experience-note {
+      margin-top: 26px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .credentials {
       background: var(--green-light);
+    }
+
+    .credential-card {
+      background: rgba(255, 255, 255, 0.78);
+    }
+
+    .credential-label {
+      display: block;
+      margin-bottom: 12px;
+      color: var(--green);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .approach {
+      background: var(--cream);
     }
 
     .approach-grid {
@@ -339,29 +436,58 @@
       color: var(--muted);
     }
 
-
-    .fees {
+    .training {
       background: var(--white);
     }
 
-    .fees-grid {
+    .training-card {
+      min-height: 220px;
+    }
+
+    .training-tag {
+      display: inline-block;
+      margin-bottom: 18px;
+      padding: 7px 11px;
+      border-radius: 999px;
+      background: var(--green-light);
+      color: var(--green-dark);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .fees {
+      background: var(--green-light);
+    }
+
+    .fees-layout {
       display: grid;
-      grid-template-columns: 0.75fr 1.25fr;
+      grid-template-columns: 0.9fr 1.1fr;
       align-items: start;
-      gap: 70px;
+      gap: 60px;
+    }
+
+    .fee-cards {
+      display: grid;
+      gap: 18px;
     }
 
     .fee-card {
-      padding: 44px;
+      padding: 38px;
       border-radius: 28px;
       background: var(--green-dark);
       color: var(--white);
       box-shadow: var(--shadow);
     }
 
+    .fee-card.secondary-fee {
+      background: var(--green);
+    }
+
     .fee-label {
       display: block;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
       color: rgba(255, 255, 255, 0.78);
       font-size: 0.9rem;
       font-weight: 700;
@@ -371,20 +497,66 @@
 
     .fee-amount {
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 4.5rem;
+      font-size: 4rem;
       line-height: 1;
     }
 
     .fee-duration {
       margin-top: 12px;
       color: rgba(255, 255, 255, 0.78);
-      font-size: 1.05rem;
+      font-size: 1.02rem;
     }
 
     .fees-copy p {
       margin-bottom: 20px;
       color: var(--muted);
       font-size: 1.05rem;
+    }
+
+    .practice-info {
+      background: var(--white);
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 14px;
+      max-width: 900px;
+    }
+
+    details {
+      border: 1px solid rgba(36, 72, 59, 0.14);
+      border-radius: 18px;
+      background: var(--cream);
+      overflow: hidden;
+    }
+
+    summary {
+      cursor: pointer;
+      padding: 22px 24px;
+      color: var(--green-dark);
+      font-weight: 700;
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "+";
+      float: right;
+      color: var(--accent);
+      font-size: 1.3rem;
+      line-height: 1;
+    }
+
+    details[open] summary::after {
+      content: "−";
+    }
+
+    .faq-answer {
+      padding: 0 24px 22px;
+      color: var(--muted);
     }
 
     .contact {
@@ -400,7 +572,7 @@
     }
 
     .contact h2 {
-      max-width: 750px;
+      max-width: 760px;
       margin-bottom: 18px;
       font-family: Georgia, "Times New Roman", serif;
       font-size: clamp(2.4rem, 4vw, 4rem);
@@ -409,7 +581,7 @@
     }
 
     .contact p {
-      max-width: 680px;
+      max-width: 720px;
       color: rgba(255, 255, 255, 0.78);
       font-size: 1.06rem;
     }
@@ -419,6 +591,18 @@
       background: var(--white);
       color: var(--green-dark);
       white-space: nowrap;
+    }
+
+    .contact .button-secondary-dark {
+      border-color: rgba(255, 255, 255, 0.7);
+      background: transparent;
+      color: var(--white);
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
     }
 
     footer {
@@ -434,18 +618,28 @@
       gap: 30px;
     }
 
+    .footer-content a {
+      text-underline-offset: 3px;
+    }
+
+    @media (max-width: 980px) {
+      .nav-links li.nav-secondary {
+        display: none;
+      }
+
+      .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
     @media (max-width: 850px) {
       nav {
         padding: 18px 0;
       }
 
-      .nav-links li:not(:last-child) {
-        display: none;
-      }
-
       .hero-grid,
       .about-grid,
-      .fees-grid,
+      .fees-layout,
       .contact-grid {
         grid-template-columns: 1fr;
       }
@@ -458,17 +652,31 @@
         padding: 70px 0;
       }
 
-      .tree-card {
-        min-height: 350px;
+      .profile-card {
+        min-height: 360px;
       }
 
-      .service-grid,
       .approach-grid {
         grid-template-columns: 1fr;
       }
 
       .contact-grid {
         align-items: start;
+      }
+
+      .contact-actions {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .nav-links li:not(:last-child) {
+        display: none;
+      }
+
+      .card-grid {
+        grid-template-columns: 1fr;
       }
     }
 
@@ -491,7 +699,8 @@
         font-size: 0.85rem;
       }
 
-      .button-group {
+      .button-group,
+      .contact-actions {
         flex-direction: column;
       }
 
@@ -499,8 +708,28 @@
         text-align: center;
       }
 
+      .profile-card,
+      .quote-card,
+      .service-card,
+      .experience-card,
+      .credential-card,
+      .training-card,
+      .fee-card {
+        padding: 28px;
+      }
+
       .footer-content {
         flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .button {
+        transition: none;
       }
     }
   </style>
@@ -516,8 +745,9 @@
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
-          <li><a href="#approach">Approach</a></li>
-          <li><a href="#fees">Fees</a></li>
+          <li class="nav-secondary"><a href="#experience">Experience</a></li>
+          <li class="nav-secondary"><a href="#credentials">Credentials</a></li>
+          <li class="nav-secondary"><a href="#fees">Fees</a></li>
           <li><a class="nav-button" href="#contact">Get in Touch</a></li>
         </ul>
       </nav>
@@ -530,29 +760,35 @@
       <div class="container hero-grid">
 
         <div>
-          <span class="eyebrow">Compassionate counselling and support</span>
+          <span class="eyebrow">Online counselling with Rupa Ray, MSW, RSW</span>
 
-          <h1>A safe place to pause, heal, and grow.</h1>
+          <h1>Thoughtful therapy, grounded in experience and care.</h1>
 
           <p class="hero-text">
-            Mighty Banyan Counselling offers respectful, compassionate, and
-            client-centred support to help you navigate life's challenges,
-            strengthen your resilience, and move forward with greater clarity.
+            Mighty Banyan Counselling offers warm, trauma-informed, culturally
+            responsive support for individuals and couples navigating emotional,
+            relational, health, work, and life challenges. High-quality counselling
+            should feel both professional and within reach.
           </p>
 
           <div class="button-group">
             <a class="button button-primary" href="#contact">
-              Book a Consultation
+              Request an Appointment
             </a>
 
             <a class="button button-secondary" href="#about">
-              Learn More
+              Meet Rupa
             </a>
           </div>
         </div>
 
-        <div class="tree-card" aria-label="Stylized banyan tree">
-          <div class="tree-symbol" aria-hidden="true">♧</div>
+        <div class="profile-card" aria-label="Rupa Ray professional profile">
+          <div class="profile-initials" aria-hidden="true">RR</div>
+          <h2>Rupa Ray, MSW, RSW</h2>
+          <p>Registered Social Worker</p>
+          <p class="profile-small">
+            Registered in Alberta and Ontario · Trauma-informed · Culturally responsive
+          </p>
         </div>
 
       </div>
@@ -562,8 +798,7 @@
       <div class="container">
 
         <div class="section-heading">
-          <span class="eyebrow">About Mighty Banyan</span>
-
+          <span class="eyebrow">Meet Rupa</span>
           <h2>Support grounded in compassion, dignity, and connection.</h2>
         </div>
 
@@ -577,40 +812,46 @@
           </div>
 
           <div class="about-copy">
-<p>
-  Hello, I’m <strong>Rupa Ray, MSW, RSW</strong>, a Registered Social Worker
-  in Alberta and Ontario. I created Mighty Banyan Counselling to offer a warm,
-  supportive, and non-judgmental space where people can feel heard, respected,
-  and understood.
-</p>
+            <p>
+              Hello, I’m <strong>Rupa Ray, MSW, RSW</strong>, a Registered Social Worker
+              in Alberta and Ontario. I created Mighty Banyan Counselling to offer a warm,
+              supportive, and non-judgmental space where people can feel heard, respected,
+              and understood.
+            </p>
 
-<p>
-  My approach is trauma-informed, culturally responsive, and collaborative.
-  Counselling is tailored to each person’s experiences, values, culture,
-  circumstances, and preferred pace rather than following a one-size-fits-all
-  approach.
-</p>
+            <p>
+              My approach is trauma-informed, culturally responsive, and collaborative.
+              Counselling is tailored to each person’s experiences, values, culture,
+              circumstances, and preferred pace rather than following a one-size-fits-all
+              approach.
+            </p>
 
-<p>
-  I also believe that high-quality counselling should be accessible. Mighty
-  Banyan was created with the goal of providing thoughtful, evidence-informed
-  therapy while keeping care within reach for more individuals and families.
-</p>
+            <p>
+              I also believe that high-quality counselling should be accessible. Mighty
+              Banyan was created with the goal of providing thoughtful, evidence-informed
+              therapy while keeping care within reach for more individuals and families.
+            </p>
 
-<p>
-  Together, we can explore the challenges you are facing, recognize your
-  strengths, better understand patterns that may be affecting you, and develop
-  practical ways to create meaningful and sustainable change.
-</p>
-<p>
-  You can also learn more about my professional background and areas of practice
-  on my
-  <a href="https://www.psychologytoday.com/ca/therapists/rupa-ray-edmonton-ab/1455513"
-     target="_blank"
-     rel="noopener noreferrer">
-    Psychology Today profile
-  </a>.
-</p>
+            <p>
+              Together, we can explore the challenges you are facing, recognize your
+              strengths, better understand patterns that may be affecting you, and develop
+              practical ways to create meaningful and sustainable change.
+            </p>
+
+            <p>
+              Counselling is available in <strong>English, Bengali, Hindi, and Urdu</strong>.
+            </p>
+
+            <p>
+              You can also learn more about my professional background and areas of practice
+              on my
+              <a
+                class="text-link"
+                href="https://www.psychologytoday.com/ca/therapists/rupa-ray-edmonton-ab/1455513"
+                target="_blank"
+                rel="noopener noreferrer"
+              >Psychology Today profile</a>.
+            </p>
           </div>
 
         </div>
@@ -622,45 +863,242 @@
 
         <div class="section-heading">
           <span class="eyebrow">Counselling services</span>
-
-          <h2>Personalized support for life's difficult seasons.</h2>
-
+          <h2>Personalized support for complex, real-life challenges.</h2>
           <p>
-            Counselling may help with a range of emotional, relational, and
-            life-transition concerns.
+            People rarely arrive in counselling with just one issue. Support can draw on
+            Rupa’s experience across mental health, trauma, healthcare, relationships,
+            rehabilitation, work, culture, and major life transitions.
           </p>
         </div>
 
-        <div class="service-grid">
+        <div class="card-grid">
 
           <article class="service-card">
             <span class="service-number">01</span>
             <h3>Individual Counselling</h3>
             <p>
-              One-to-one support in a confidential and compassionate setting,
-              focused on your needs, experiences, and personal goals.
+              One-to-one support for anxiety, depression, chronic stress, self-esteem,
+              emotional overwhelm, relationship concerns, parenting stress, and other
+              personal challenges.
             </p>
           </article>
 
           <article class="service-card">
             <span class="service-number">02</span>
-            <h3>Stress and Life Transitions</h3>
+            <h3>Couples Counselling</h3>
             <p>
-              Support for managing stress, uncertainty, changing roles,
-              relationship concerns, loss, or major life transitions.
+              A collaborative space to work through communication difficulties, recurring
+              conflict, emotional distance, changing roles, parenting stress, and the work
+              of rebuilding connection and trust.
             </p>
           </article>
 
           <article class="service-card">
             <span class="service-number">03</span>
-            <h3>Emotional Well-Being</h3>
+            <h3>Trauma & Recovery</h3>
             <p>
-              A supportive space to explore difficult emotions, build coping
-              strategies, strengthen confidence, and improve well-being.
+              Trauma-informed support for difficult past experiences, PTSD symptoms,
+              sexual violence, and other experiences that continue to affect emotions,
+              relationships, sleep, or daily life.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">04</span>
+            <h3>Grief, Health & Life Transitions</h3>
+            <p>
+              Support through grief and loss, chronic illness or pain, changes in health,
+              caregiving demands, sleep difficulties, and major transitions that can shift
+              a person’s sense of stability or identity.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">05</span>
+            <h3>Work, Disability & Rehabilitation</h3>
+            <p>
+              Counselling informed by experience with workplace injury, disability,
+              vocational rehabilitation, WCB-related concerns, return-to-work challenges,
+              and the emotional impact of changes in functioning or employment.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">06</span>
+            <h3>Cross-Cultural & Newcomer Support</h3>
+            <p>
+              Culturally responsive counselling that can make room for migration,
+              settlement, identity, family expectations, intergenerational concerns,
+              belonging, and the experience of building a life across cultures.
             </p>
           </article>
 
         </div>
+      </div>
+    </section>
+
+    <section class="experience" id="experience">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">Professional experience</span>
+          <h2>Experience across community, healthcare, trauma, rehabilitation, and private practice.</h2>
+          <p>
+            Rupa’s clinical background spans a wide range of settings and populations.
+            That breadth informs the way she understands complex concerns that often cross
+            the boundaries between mental health, physical health, family, work, culture,
+            and life circumstances.
+          </p>
+        </div>
+
+        <div class="card-grid">
+
+          <article class="experience-card">
+            <span class="organization">Catholic Social Services</span>
+            <h3>Immigrants & Refugees</h3>
+            <p>
+              Community-based experience supporting newcomers and families navigating
+              settlement, adjustment, culture, stress, and major life transitions.
+            </p>
+          </article>
+
+          <article class="experience-card">
+            <span class="organization">Alberta Health Services / Recovery Alberta</span>
+            <h3>Hospital & Mental Health Care</h3>
+            <p>
+              Experience in healthcare settings where mental health concerns often
+              intersect with acute stress, medical issues, family needs, and complex systems.
+            </p>
+          </article>
+
+          <article class="experience-card">
+            <span class="organization">University of Alberta · Faculty of Nursing</span>
+            <h3>Chronic Illness & Dialysis</h3>
+            <p>
+              Work involving people receiving dialysis, with attention to the emotional,
+              relational, and day-to-day impact of living with serious chronic illness.
+            </p>
+          </article>
+
+          <article class="experience-card">
+            <span class="organization">CEASE</span>
+            <h3>Sexual Violence Survivors</h3>
+            <p>
+              Trauma-focused experience supporting survivors of sexual violence with care,
+              respect, choice, and sensitivity to safety and readiness.
+            </p>
+          </article>
+
+          <article class="experience-card">
+            <span class="organization">Lifemark</span>
+            <h3>Vocational & Rehabilitation Care</h3>
+            <p>
+              Experience working alongside vocational teams and supporting WCB claimants
+              navigating injury, disability, rehabilitation, and return-to-work concerns.
+            </p>
+          </article>
+
+          <article class="experience-card">
+            <span class="organization">Private Practice</span>
+            <h3>Six Years of Clinical Practice</h3>
+            <p>
+              Ongoing counselling work with individuals and couples across a broad range of
+              emotional, relational, trauma-related, health, and life concerns.
+            </p>
+          </article>
+
+        </div>
+
+        <p class="experience-note">
+          Organization names are included to describe Rupa’s professional background and
+          do not imply endorsement of Mighty Banyan Counselling by those organizations.
+        </p>
+      </div>
+    </section>
+
+    <section class="credentials" id="credentials">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">Credentials & professional development</span>
+          <h2>Clinical training supported by ongoing learning and consultation.</h2>
+          <p>
+            This section will continue to grow as we add Rupa’s complete training history
+            and selected certifications.
+          </p>
+        </div>
+
+        <div class="card-grid">
+
+          <article class="credential-card">
+            <span class="credential-label">Education</span>
+            <h3>Master of Social Work</h3>
+            <p>
+              Clinical specialization, University of Calgary.
+            </p>
+          </article>
+
+          <article class="credential-card">
+            <span class="credential-label">Professional registration</span>
+            <h3>Registered Social Worker</h3>
+            <p>
+              Registered to practise social work in Alberta and Ontario.
+            </p>
+          </article>
+
+          <article class="credential-card">
+            <span class="credential-label">Trauma therapy</span>
+            <h3>EMDR & ART Training</h3>
+            <p>
+              Specialized training in EMDR (Eye Movement Desensitization and Reprocessing)
+              and Accelerated Resolution Therapy (ART).
+            </p>
+          </article>
+
+          <article class="credential-card">
+            <span class="credential-label">Ongoing consultation</span>
+            <h3>Complex Case Consultation</h3>
+            <p>
+              Rupa invests in regular independent clinical consultation and supervision,
+              including biweekly review of complex cases as part of her commitment to
+              thoughtful, accountable practice.
+            </p>
+          </article>
+
+          <article class="credential-card">
+            <span class="credential-label">Coming next</span>
+            <h3>Selected Certificates</h3>
+            <p>
+              We will add selected professional certificates and advanced training here,
+              including precise course titles and dates from Rupa’s CV.
+            </p>
+          </article>
+
+          <article class="credential-card">
+            <span class="credential-label">Professional profile</span>
+            <h3>Psychology Today</h3>
+            <p>
+              <a
+                class="text-link"
+                href="https://www.psychologytoday.com/ca/therapists/rupa-ray-edmonton-ab/1455513"
+                target="_blank"
+                rel="noopener noreferrer"
+              >View Rupa’s Psychology Today profile</a>
+              for an additional overview of her practice.
+            </p>
+          </article>
+
+        </div>
+
+        <!--
+          Later, once Rupa's CV is available, this is a good place to add:
+          - exact ACSW / Ontario registration wording
+          - selected ART certificate titles and levels
+          - EMDR training details
+          - CBT-I and other specialized training
+          - optional links to professional registries
+          Avoid posting registration numbers or personal certificate details unless Rupa wants them public.
+        -->
       </div>
     </section>
 
@@ -668,33 +1106,33 @@
       <div class="container">
 
         <div class="section-heading">
-          <span class="eyebrow">Our approach</span>
-          <h2>Counselling that honours your story.</h2>
+          <span class="eyebrow">How Rupa works</span>
+          <h2>Counselling that honours your story and responds to your needs.</h2>
         </div>
 
         <div class="approach-grid">
 
           <div class="approach-item">
-            <h3>Client-Centred</h3>
+            <h3>Collaborative & Client-Centred</h3>
             <p>
-              Your priorities, experiences, values, and goals guide the
-              counselling process.
+              Your priorities, experiences, values, and goals guide the counselling process.
+              Therapy is something we work on together, not something done to you.
             </p>
           </div>
 
           <div class="approach-item">
-            <h3>Strengths-Based</h3>
+            <h3>Trauma-Informed & Strengths-Based</h3>
             <p>
-              We recognize the skills, resilience, knowledge, and strengths you
-              already carry.
+              Care is grounded in safety, choice, pacing, and respect for the skills and
+              resilience you already carry.
             </p>
           </div>
 
           <div class="approach-item">
             <h3>Culturally Responsive</h3>
             <p>
-              Your identity, background, family, community, and lived
-              experience are respected and welcomed.
+              Identity, culture, migration, family, community, faith, language, and lived
+              experience can all matter in therapy and are welcomed without assumption.
             </p>
           </div>
 
@@ -702,68 +1140,196 @@
       </div>
     </section>
 
+    <section class="training" id="training">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">Therapeutic approaches</span>
+          <h2>Evidence-informed care, adapted to the person in front of us.</h2>
+          <p>
+            Rupa draws from multiple therapeutic frameworks rather than forcing every
+            concern into a single method. We will expand this section with exact training
+            details once her CV is available.
+          </p>
+        </div>
+
+        <div class="card-grid">
+
+          <article class="training-card">
+            <span class="training-tag">Trauma-focused</span>
+            <h3>EMDR</h3>
+            <p>
+              Eye Movement Desensitization and Reprocessing is one of the specialized
+              approaches Rupa can draw on when working with trauma-related concerns.
+            </p>
+          </article>
+
+          <article class="training-card">
+            <span class="training-tag">Trauma-focused</span>
+            <h3>Accelerated Resolution Therapy</h3>
+            <p>
+              ART is another structured trauma-focused approach within Rupa’s clinical
+              training and may be considered when appropriate to a client’s needs and goals.
+            </p>
+          </article>
+
+          <article class="training-card">
+            <span class="training-tag">Integrative</span>
+            <h3>Individualized, Evidence-Informed Care</h3>
+            <p>
+              Other therapeutic tools can be integrated according to the concern, the
+              client’s preferences, and the goals of therapy. Specific modalities and
+              training details will be added here from Rupa’s CV.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
 
     <section class="fees" id="fees">
       <div class="container">
 
         <div class="section-heading">
-          <span class="eyebrow">Fees and payment</span>
-          <h2>Professional counselling at an accessible rate.</h2>
+          <span class="eyebrow">Fees & payment</span>
+          <h2>Experienced professional counselling at an intentionally accessible rate.</h2>
+          <p>
+            Accessible pricing is a deliberate part of the Mighty Banyan model. It does not
+            mean a reduced standard of care.
+          </p>
         </div>
 
-        <div class="fees-grid">
+        <div class="fees-layout">
 
-          <div class="fee-card">
-            <span class="fee-label">Individual counselling</span>
-            <p class="fee-amount">$100</p>
-            <p class="fee-duration">per 50-minute session</p>
+          <div class="fee-cards">
+            <div class="fee-card">
+              <span class="fee-label">Individual counselling</span>
+              <p class="fee-amount">$100</p>
+              <p class="fee-duration">per 50-minute session</p>
+            </div>
+
+            <div class="fee-card secondary-fee">
+              <span class="fee-label">Couples counselling</span>
+              <p class="fee-amount">$120</p>
+              <p class="fee-duration">per couples session</p>
+            </div>
           </div>
 
           <div class="fees-copy">
             <p>
-              The fee reflects a conscious commitment to accessibility. Online
-              delivery and a low-overhead practice model make it possible to
-              offer experienced, professional counselling at a rate that is
-              more manageable for many clients.
+              Mighty Banyan is built around a simple belief: thoughtful, experienced,
+              professional counselling should be accessible to more people. Online delivery
+              and a low-overhead practice model help make that possible.
             </p>
 
             <p>
-              Mighty Banyan Counselling is committed to maintaining a high
-              standard of professional care. Information about the
-              practitioner’s credentials, experience, training, and relevant
-              certifications is available on this website.
+              Appointments are arranged directly. Payment by <strong>e-transfer</strong>
+              must be received at least <strong>24 hours before the scheduled session</strong>.
+              Once payment is received, the appointment is confirmed and instructions for
+              joining the secure online session are provided.
             </p>
 
             <p>
-              Appointments are arranged directly by email or phone. Payment of
-              <strong>$100 by e-transfer</strong> must be received at least
-              <strong>24 hours before the scheduled session</strong>. Once
-              payment is received, the appointment is confirmed and the client
-              will receive instructions for joining the secure online session
-              through Jane.
+              Payments are <strong>non-refundable</strong>. Clients may reschedule with at
+              least <strong>24 hours’ notice</strong>. Appointments cancelled or rescheduled
+              with less than 24 hours’ notice will result in the session fee being forfeited.
             </p>
 
             <p>
-              Payments are <strong>non-refundable</strong>. Clients may
-              reschedule an appointment by providing at least
-              <strong>24 hours’ notice</strong>. Appointments cancelled or
-              rescheduled with less than 24 hours’ notice will result in the
-              session fee being forfeited.
+              If the provider is unable to keep the appointment, a replacement appointment
+              will be arranged at no additional cost.
             </p>
 
             <p>
-              If the provider is unable to keep the appointment, a replacement
-              appointment will be arranged at no additional cost.
-            </p>
-
-            <p>
-              Direct billing is not available. A receipt will be provided and
-              may be submitted to an insurance provider for reimbursement,
-              depending on the terms of the client’s plan.
+              Direct billing is not available. A receipt will be provided. Coverage for
+              counselling provided by a Registered Social Worker varies by insurance plan,
+              so clients are encouraged to confirm their own benefits before booking.
             </p>
           </div>
 
         </div>
+      </div>
+    </section>
+
+    <section class="practice-info" id="practice-info">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">Practice information</span>
+          <h2>A few practical details before you begin.</h2>
+          <p>
+            This section gives us a clean framework for the questions clients are most
+            likely to have. We can expand it later into a fuller FAQ or separate policy pages.
+          </p>
+        </div>
+
+        <div class="faq-list">
+
+          <details>
+            <summary>Where are sessions offered?</summary>
+            <div class="faq-answer">
+              <p>
+                Mighty Banyan Counselling is an online practice. Rupa is registered in
+                Alberta and Ontario, and services are provided within the jurisdictions in
+                which she is professionally registered.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Will my insurance cover the session?</summary>
+            <div class="faq-answer">
+              <p>
+                Many extended health plans include counselling provided by a Registered
+                Social Worker, but coverage varies. Mighty Banyan does not direct bill.
+                You will receive a receipt that you can submit to your insurer where eligible.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>What should I expect when I first get in touch?</summary>
+            <div class="faq-answer">
+              <p>
+                You can email Mighty Banyan with a brief description of what you are looking
+                for and your general availability. Rupa can then determine whether the
+                service appears to be an appropriate fit and discuss next steps for booking.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>What about confidentiality?</summary>
+            <div class="faq-answer">
+              <p>
+                Privacy and confidentiality are central to counselling. The limits of
+                confidentiality, record keeping, informed consent, and online-session
+                practices are reviewed as part of beginning services.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Is Mighty Banyan an emergency or crisis service?</summary>
+            <div class="faq-answer">
+              <p>
+                No. Mighty Banyan does not provide emergency or crisis-response services.
+                If you are in immediate danger or need urgent help, contact local emergency
+                services or an appropriate crisis service in your area.
+              </p>
+            </div>
+          </details>
+
+        </div>
+
+        <!-- Future FAQ ideas:
+          - How long are couples sessions?
+          - Do you offer a brief introductory consultation?
+          - What technology/platform is used for online sessions?
+          - What age groups are accepted through Mighty Banyan?
+          - What happens if I need to cancel?
+          - Is sliding-scale pricing available?
+        -->
       </div>
     </section>
 
@@ -771,18 +1337,31 @@
       <div class="container contact-grid">
 
         <div>
-          <h2>You do not have to navigate everything alone.</h2>
-
+          <h2>Ready to see whether Mighty Banyan feels like the right fit?</h2>
           <p>
-            Contact Mighty Banyan Counselling to ask a question or arrange an
-            initial consultation. Additional appointment and contact
-            information will be added here shortly.
+            You are welcome to get in touch with a question or to request an appointment.
+            A brief email about what you are looking for and your general availability is a
+            good place to start.
           </p>
         </div>
 
-        <a class="button" href="mailto:mightybanyancounselling@gmail.com">
-          Email Us
-        </a>
+        <div class="contact-actions">
+          <a
+            class="button"
+            href="mailto:mightybanyancounselling@gmail.com?subject=Appointment%20Inquiry"
+          >
+            Email Mighty Banyan
+          </a>
+
+          <a
+            class="button button-secondary-dark"
+            href="https://www.psychologytoday.com/ca/therapists/rupa-ray-edmonton-ab/1455513"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Psychology Today Profile
+          </a>
+        </div>
 
       </div>
     </section>
@@ -791,11 +1370,11 @@
 
   <footer>
     <div class="container footer-content">
+      <p>&copy; 2026 Mighty Banyan Counselling. All rights reserved.</p>
       <p>
-        &copy; 2026 Mighty Banyan Counselling. All rights reserved.
+        Online counselling · Alberta & Ontario ·
+        <a href="mailto:mightybanyancounselling@gmail.com">Contact</a>
       </p>
-
-      <p>Serving clients in Alberta.</p>
     </div>
   </footer>
 
